@@ -1,16 +1,16 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.php", "use": "@vercel/php" },
-    { "src": "play.php", "use": "@vercel/php" },
-    { "src": "live.php", "use": "@vercel/php" },
-    { "src": "get.php", "use": "@vercel/php" },
-    { "src": "playlist.php", "use": "@vercel/php" },
-    { "src": "tv.php", "use": "@vercel/php" },
-    { "src": "channels.php", "use": "@vercel/php" },
-    { "src": "epg.php", "use": "@vercel/php" },
-    { "src": "player.php", "use": "@vercel/php" },
-    { "src": "drm.php", "use": "@vercel/php" }
+    { "src": "index.php", "use": "vercel-php" },
+    { "src": "play.php", "use": "vercel-php" },
+    { "src": "live.php", "use": "vercel-php" },
+    { "src": "get.php", "use": "vercel-php" },
+    { "src": "playlist.php", "use": "vercel-php" },
+    { "src": "tv.php", "use": "vercel-php" },
+    { "src": "channels.php", "use": "vercel-php" },
+    { "src": "epg.php", "use": "vercel-php" },
+    { "src": "player.php", "use": "vercel-php" },
+    { "src": "drm.php", "use": "vercel-php" }
   ],
   "routes": [
     { "src": "/play(.*)", "dest": "/play.php?get=$1" },
