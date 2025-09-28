@@ -1,22 +1,28 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "*.php",
-      "use": "@vercel/php"
-    }
+    { "src": "index.php", "use": "@vercel/php" },
+    { "src": "play.php", "use": "@vercel/php" },
+    { "src": "live.php", "use": "@vercel/php" },
+    { "src": "get.php", "use": "@vercel/php" },
+    { "src": "playlist.php", "use": "@vercel/php" },
+    { "src": "tv.php", "use": "@vercel/php" },
+    { "src": "channels.php", "use": "@vercel/php" },
+    { "src": "epg.php", "use": "@vercel/php" },
+    { "src": "player.php", "use": "@vercel/php" },
+    { "src": "drm.php", "use": "@vercel/php" }
   ],
   "routes": [
-    {
-      "src": "/(.*\\.php)$",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
+    { "src": "/play(.*)", "dest": "/play.php?get=$1" },
+    { "src": "/live(.*)", "dest": "/live.php?get=$1" },
+    { "src": "/get(.*)", "dest": "/get.php?get=$1" },
+    { "src": "/playlist(.*)", "dest": "/playlist.php?get=$1" },
+    { "src": "/tv(.*)", "dest": "/tv.php?get=$1" },
+    { "src": "/channels(.*)", "dest": "/channels.php?get=$1" },
+    { "src": "/epg(.*)", "dest": "/epg.php?get=$1" },
+    { "src": "/player(.*)", "dest": "/player.php?get=$1" },
+    { "src": "/drm(.*)", "dest": "/drm.php?get=$1" },
+    { "src": "/(.*)", "dest": "/index.php?get=$1" }
   ],
-  "env": {
-    "COUNTRY": "IN"
-  }
+  "regions": ["bom1"]
 }
